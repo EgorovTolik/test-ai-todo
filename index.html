@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="app-header">
+      <h1>Todos</h1>
+      <p id="remaining-count" class="remaining">0 tasks left</p>
+    </header>
+
+    <form id="add-form" class="add-form" autocomplete="off">
+      <input
+        id="todo-input"
+        type="text"
+        placeholder="Что нужно сделать?"
+        aria-label="Новая задача"
+        autofocus
+      />
+      <button type="submit">Добавить</button>
+    </form>
+
+    <nav class="filter-bar" aria-label="Фильтры">
+      <button type="button" data-filter="all" class="active">Все</button>
+      <button type="button" data-filter="active">Активные</button>
+      <button type="button" data-filter="completed">Выполненные</button>
+    </nav>
+
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <footer class="app-footer">
+      <button id="clear-completed" type="button" class="link-btn">Очистить выполненные</button>
+    </footer>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
